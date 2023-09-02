@@ -1,0 +1,31 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main # Adjust the branch name as needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.7
+
+      - name: Install webdriver_manager
+        run: pip install webdriver_manager
+
+      - name: Run Play.py
+        run: python Play.py
+
+      - name: Install app_store_scraper
+        run: pip install app_store_scraper
+
+      - name: Run app_store_scraping.py
+        run: python app_store_scraping.py
