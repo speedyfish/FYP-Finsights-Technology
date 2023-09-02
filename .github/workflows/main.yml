@@ -13,6 +13,15 @@ jobs:
       - name: Check Chrome Version
         run: google-chrome --version
 
+      - name: Install ChromeDriver
+        run: |
+          CHROME_VERSION="116.0.5845.96"  # Replace with your Chrome version
+          CHROME_DRIVER_URL="https://chromedriver.storage.googleapis.com/$CHROME_VERSION/chromedriver_linux64.zip"
+          curl -L -o chromedriver.zip "$CHROME_DRIVER_URL"
+          unzip chromedriver.zip
+          chmod +x chromedriver
+          sudo mv chromedriver /usr/local/bin/
+
       - name: Checkout code
         uses: actions/checkout@v2
 
