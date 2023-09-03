@@ -24,4 +24,4 @@ jobs:
       - name: Scraping Data
         run: |
           python data_scraping.py
-        working_directory: .
+        working-directory: .
