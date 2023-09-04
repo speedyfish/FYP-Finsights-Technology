@@ -2,12 +2,17 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 # Create a ChromeOptions object and add the '--headless' argument if needed
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
 
 # Initialize the webdriver with the ChromeDriverManager
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+wait = WebDriverWait(driver, 10)
 
 # Rest of your code...
 
@@ -75,16 +80,21 @@ def scrape_reviews(n_scroll):
 # scrapes all reviews of a page
 def scrape(link):
 
-    driver.get(link) #driver is global variable
-    sleep(3) #forced for smoother page loading
-    # ratings modal
+    driver.get(link)  # driver is a global variable
 
-    headers = driver.find_elements("xpath", "//header[@class=' cswwxf']")
+    # Wait for the Ratings and Reviews button to be clickable
+    ratings_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]"))
+    )
+
+    # Scroll to the button (if needed)
+    driver.execute_script("arguments[0].scrollIntoView();", ratings_button)
+
+    # Click the Ratings and Reviews button
+    ratings_button.click()
+    
     ratings_modal = []
-    for header in headers:
-        if "Ratings and reviews" in header.text:
-            ratings_modal = header.find_elements(
-                "xpath", "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")
+    
     
     if ratings_modal == []:
         return '' #no reviews - checked only once cause if no phone reviews then there won't be any tablet reviews
