@@ -1,177 +1,41 @@
-S/N,Verbatim,Dates
-1,Very so so... Every now and again it crashes somewhere for one or another reason or part of it doesn't work as it should. Most recent issue: After scanning QR code it doesn't get through to the screen with fingerprint scan. But that's ONLY when connected via WiFi! On 4G/5G network it works as it should. This issue has been with us for some time and yet UBS can't get it fixed. It seems to be some issue with physical location authentication.,"June 27, 2023"
-2,"Per the Service Group, there's a workaround to the highly annoying ""Device biometrics have been modified"" error. Uninstall, remove all your biometrics (e.g., fingerprints), reinstall, and then add back the biometrics. I did that a few months ago and haven't had the error since! Would be really nice if they updated the error message to point users towards this!","January 17, 2023"
-3,Was told the app requires Android Version 10 or above. My old phone had Version 9 and couldn't be updated so I just purchased a new phone that operates on Version 12. I'm still experiencing the same issue. Can't get past initial login screen. Neither the 'Next' nor the 'Skip' button works. I've uninstalled and reinstalled the app multiple times with no luck. Please fix this ASAP.,"February 15, 2023"
-4,"Since the last update, it is crashing for me on the camera screen, just before the scanning of the QR code. No error message, just a crash. And I had no issue with this app in the past, so please roll back this update or fix it. And yes I have tried to restart my phone, reset the app, delete cache and storage, re-enroll, even reset the phone! It still works on my Samsung tablet though, but I don't want to carry a tablet around to login for work, nor I am buying a new phone (mine is Android 11).","December 2, 2022"
-5,Bad fingerprint reader causes me to reinstall the app and get vouch codes regularly. Device pixel 7 Phone thinks it's a failed and tries again and again within split seconds. This will result in too many failed attempts and blockage of account before I even had the time to lift my finger. A delay has to be built in to avoid that or a restart or the process before it just blocks the account. We (me and my team) are wasting time with reinstallation and vouch codes....,"January 16, 2023"
-6,"Generally it's quite quick to use. But after the latest update the app keeps crashing (even after restarting phone, reinstalling, re-enrolling)! Local UBS IT support said it's a known issue for OnePlus phones and the temp workaround is: remove location permission for MobilePass app or just turn off GPS to make the app work. That did the trick.","December 5, 2022"
-7,"Not compatible with android OS under 10. Also not compatible with phones bought online, considered jailbroken. If you get a new phone (I did) don't do a smart switch from old ""jailbroken"" phone or it will carry over the information and still not work. You'll have to do a factory reset on new phone. Good luck everyone!","July 2, 2022"
-8,0/10 So the reason this cheaply made app crashes on the biometrics side is to do with the phone make. It's stable on iphones but not other makes. My pixel phone biometrics are not very compatible with the app which is not my phone's fault it just means the app is poorly made since it claims to be Android compatible. The other reason and no one tells you is you may need specific zone vouch keys at times so it's not enough to get these vouch keys you also need to have them from the right people.,"November 14, 2022"
-9,"Not happy that app requires access to my contacts. I suppose this is because that is where my own biometric data is stored? There should be a higher granularity where I can grant permission to just my biometric data, not just ""Contacts"" which is potentially all my contacts. If I don't want to violate the privacy of my family and friends, disclosing their names and private addresses, phone numbers, and e-mail addresses to a 3rd party, then I need to buy a separate phone just for authentication?","May 6, 2020"
-10,"0 _____ If there is some problem with it then you need to reinstall the whole app...It doesn't tell you exactly what is the problem but you need to reinstall and find 2 collegaues to enroll it again which is not the most simple thing when you can't access to your VM(when you are from home) because of the issue with the app. Very poorly designed UI. +Other issues. Please do not deactivate Veredium because that is the only way to overcome this issue, until the UBS app's quality is that low.","January 22, 2021"
-11,"The app will frequently give me an error because it will not recognize my biometrics, and then lock me out. This is inexcusable, it wastes time for myself and my colleagues and looks bad that I need regular assistance just to get logged in to work. I do not have any other biometrics issues with any other app on my phone. I have an Android 10 device. Please fix this, I am not able to work in-office due to medical and personal reasons, I HAVE to have this app to log in to work every day!","February 8, 2023"
-12,"Works perfectly most of the time, and extremely fast. But sometimes it gets stuck loading or something, and I have to force quit the app and restart, then it works again.","May 29, 2021"
-13,Whatever mechanism is used to recognize fingerprints is awful. I have multiple apps thst use the fingerprint reader with no issues at all. This app fails to recognize on a regular basis. Absolutely inexcusable in this day and age,"March 9, 2021"
-14,Wipes out the fingerprint authenticator every time you restart the phone. If you do want to restart the phone make sure you have asked your colleagues at work to help you set up your app again because the app would wipe out the authenticator and require you to uninstall and reinstall the app for you to be able to logon to the system. Pretty sure this is a security feature but a minor inconvenience worth living with for us little people. Please forgive the 1 star. It's me not you.,"May 23, 2020"
-15,"When I click close, the app doesn't close but the window disappears and carries on running in the background. Updates when they stop users to login to red zone? 🤔 Apart from that I manage to login on first attempt, mostly.","July 20, 2020"
-16,"Broken, constantly stating biometrics are changed or invalid when nothing has been altered within the dedicated phone. Also app quits to main menu multiple times. This seems to be an issue for multiple people","March 29, 2021"
-17,Reinstalled a few days back as it failed to recognise the fingerprints. Now failed again after a few days fornthe exact same reason. Although I am able to unlock the phone without any issues. Cannot register my fingerprints again just to ensure that the app works fine again,"March 21, 2022"
-18,"The app keeps crashing daily, making it impossible to login. I have to uninstall/reinstall, and get vouch codes to get the app working again. However, by the next day, the app is broken again. Please fix this!!","June 18, 2021"
-19,Practically every month the app needs to be reinstalled due to Biometric change error when using QR code. In fact nothing changed on the phone. The OTP works fine even though it too uses finger prints.,"October 18, 2022"
-20,"Would be nice to retry the finger print scanning without rescan the QR code, 2-3 times I had some ClassCastException with full stacktrace... Maybe this kind of issues somehow should be tracked by the app and if we can would be nice to improve it as well 😌","October 1, 2020"
-21,"Indeed a horrendous app. Authentication could and should be done miles better than this half baked app that must be tolerated on my personal device. The second star only because the not required contacts permission has finally been dropped, but still not entirely convinced this merits two stars.","August 21, 2020"
-22,"Requires 2 vouch codes when the app is updated or the phone is updated, meaning we cannot login on weekends suddenly. Why do we need to enter vouch code over and over again ?? Edit: It now asks you to enter username into the app, everytime, for some reason. Horrendous app !","August 31, 2020"
-23,"2 vouch codes needed every time you do something to the app or even your phone. Also amazed at the number of ppl giving 5 stars, really doubt the authenticity of them as I really cannot understand where the 5 star comes from, from user unfriendliness to absolute lack of displaying useful info when you are inside the app.","September 21, 2020"
-24,"Completely unable to unlock the screen with UBS mobile pass scanner..But am able to login afresh by screening the QR code generated out of first log in attempt. But, when i leave the screen idle..I am not able to unlock it using UBS mobile pass and shows error everytime.","May 28, 2020"
-25,"Spyware. Even after closing the app, it continues to access the camera. One has to remove it from memory, in order to stop the app completely.","October 12, 2020"
-26,"Crashing on camera every time! Latest Android on Pixel 7. And yes I tried to restart everything, does not help!","March 9, 2023"
-27,"The app leaves the camera device open after exit. This destroys devide battery, it can easily use 50% of device battery for the day after using it for less than a minute. Evidence is e.g. flashlight does not function until you force-kill the app.","April 5, 2021"
-28,"A suggestion, please make location permission a default mandate like remote work. As users can sometimes forget and end up losing time having to reconnect again post enabling location on smartphone.","August 4, 2020"
-29,"Works most of the time, but since the last update it's constantly asking me to update my OS. I have the latest version my phone supports... So I have to buy a new phone now? It's a stupid error message and I can't get rid of it. Very poor.","December 7, 2021"
-30,"Why can't the android version include facial recognition when the iPhone version does? Fingerprint identification doesn't work more often than it does, and it makes WFH very difficult.","September 7, 2021"
-31,"Update jul-22: still as unreliable as before. No improvement. Have to reinstall out of the blue, from scratch, asking colleagues for two vouch keys (so annoying and time wasting!) Why can't ubs have 2 factors auth with sms or mobile, like everyone else?","July 4, 2022"
-32,Horrible issues logging in with this app and bug with having to uninstall and calling tech support multiple times a day after logging in due to losing camera access somehow. Doesnt work with Android,"July 18, 2022"
-33,"Poor design, if there is any issue with login and we want to register ourselves, we need to reinstall the app again and again. Why can't we have an option to erase previous data and register ourselves with fresh credentials","June 10, 2020"
-34,"This is SO annoying!! Why do I need to reinstall app EVERYDAY, ask for vouch codes when I just for a few seconds each day just because the app thinks my fingerprint somehow changed, even though it's not the case? Why???","November 11, 2022"
-35,Upgraded to android 12 and the app no longer works. How can this be the only app which doesn't work on my phone after the android 12 upgrade. That is poor and disappointing.,"October 29, 2021"
-36,"Battery draining issue. Battery efficiency reduced drastically on using the app. Apart from it, easy and good to use app","June 30, 2021"
-37,OMG what's up with this stupid app. It disables biometrics if I my fingerprint is not recognised thrice. And why the hell Android face recognition is not working. Its way better and advanced than iOS.,"October 4, 2021"
-38,Same issue as others with device biometrics have changed error message requiring a reinstall and vouch codes. No changes on my device. Terrible app.,"October 11, 2022"
-39,Few possible un necessory access like why on the earth wants my contact access 2.unable to log in saying location not available or serviceable Update 2 :- they removed contact permission and now only camera and location and working very fabulous now.,"August 12, 2020"
-40,Terrible ... Guys who have implemented it have no idea about application design and should be fired right away.. it asked about my fingerprint and after 3s got a message that my device got locked. Morons..,"August 5, 2022"
-41,The app constantly (falsely) detects a biometric change on my phone! Then I have to uninstall and reinstall the app and chase two of mycollegues in order to login again. Phone LG G6,"June 2, 2021"
-42,After accept and continue on the welcome screen the app is getting stuck. Skip / Next button is not working. Unable to use the app.,"March 14, 2022"
-43,To many issues it keeps telling me biometrics changes detected but nothing is changing. It is keeping me from working... it keeps telling me to uninstall,"April 22, 2021"
-44,It says OS has to be updated to access UBS Mobile pass. But I don't have any new updates and all are up to date 🙄 waste of my time. Need to uninstall now and install again 🙄,"March 6, 2021"
-45,"Additional of fingerprints should not make whole authentication invalid. Once trust is established between device and account, why have hard dependency on fingerprint store changes?","April 7, 2021"
-46,If you toch on the fingerprint scanner in error for more than 3 times the app needs to be verified again in todays phones where finger print is on power button its a curse,"December 5, 2022"
-47,Biomteric is very problematic and it prompts to upgrade device OS even if there is no upgrade available published from phone Manufacturer. What does UBS think people will buy new phone every year ?,"November 21, 2022"
-48,"Since we have updated Mobile pass, it started crashing when we try to scan QR code, i have OnePlus 6. I would request you to review and help us..","December 6, 2022"
-49,"Does not take the correct location, it keeps showing that i am in România, but i'm in Switzerland. Google Maps shows it correctly.","November 22, 2022"
-50,"Blocks the camera after each use, then i have to restart my phone, in order to either use my camera again or this app. Hope and wish testing was done before releasing the app","October 19, 2020"
-51,"Installation, enrollment and logging in is great only 1 thing upsets me is to turn on the location. Far better than veridium. Thankyou dev team.","June 9, 2020"
-52,My fingerprints change slightly every other week and every time this happens the application has to get deleted and reinstalled and reregistered after updating your system biometrics?,"April 3, 2023"
-53,Drains my battery at an incredible rate. used it 3 times today just for a quick log-in and it somehow took 26% of the battery.,"February 25, 2022"
-54,"Horrendous app that should not be installed. Smartcard authentication works via Citrix, why not enable Smartcards and get rid of this app?","March 17, 2021"
-55,1. Access to my contact list 2. Access to my geo location 3. More time taken compared to Veridium If it's app to allow securely login why it's collecting users personnal data.,"May 8, 2020"
-56,After downloading i am not able to go past the welcome screen. Nothing happens when you click skip or next button.,"March 9, 2022"
-57,"I am not able to proceed further"" login using mobile pass"" screen, not able to click on Next button. I am using OnePlus Nord, Android version 11. Can you plz tell me what need to be done to use it on my mobile","March 7, 2022"
-58,Every 2-3 weeks my fingerprint gets invalidated and I need to do the registration over and over again. Pretty annoying and time consuming.,"February 9, 2021"
-59,step 3 with QR reader is blocked. Both buttons 'Skip' and 'Next' are not working same as reader. please fix asap it as it makes app useless,"March 10, 2022"
-60,2nd time in 2 weeks having to re-install since it incorrectly claims I've done a biometrics reset. Same happend a few months ago too.,"July 6, 2022"
-61,"Getting fingerprint invalidation way too often, with all the related time cost to reinstall and reconfigure.","October 18, 2022"
-62,Veridium app was much more secure and less time taking comparatively. This app is not taking biometrics stored and failing mostly to authenticate fingerprints,"May 27, 2020"
-63,After updating Mobilepass; Fingerprint is not working properly only for this app but for other apps fingerprint is working fine.,"December 15, 2021"
-64,"Not able to move on from the welcome page. Nothing happens if i click ""skip"" or ""next""","March 11, 2022"
-65,This is my third reinstall because it detected a change to the fingerprint on the device. No change actually happened,"September 17, 2021"
-66,UBS should had stick with Veridium. I have to enroll almost every couple of months since this app randomly decides to refuse our biometrics.,"September 15, 2020"
-67,Can't use the buttons to generate OTP. Re-installed it but now I can't use the Next button to setup my credentials.,"March 12, 2022"
-68,"The app is getting crashed right after opening it. No scanner, no QR code screen is coming.","December 5, 2022"
-69,"Hi, after the mobile pass download ,I am unable to go to next page ...both the skip and next button not working . Please help","March 7, 2022"
-70,Buttons suddenly stopped working - unable to use it to generate a code and after re-install now unable to enroll it again -.-,"March 8, 2022"
-71,many times late for work because of this non-functional app. almost everyday reinstall and reenroll needed... Android 10,"November 17, 2021"
-72,"Since last update,the mobile pass app is not launching properly, the scan/OTP screen disappear before any action","December 5, 2022"
-73,Performance has slowed significantly. Please monitor and maintain.,"December 1, 2022"
-74,"Location accuracy is not at all good, regardless of what android version you use.","September 27, 2021"
-75,This app is not working on my samsung s10 lite and one plus 5t. Could you please update asap.,"March 12, 2022"
-76,"It's damn slow, it takes forever to come up and scan the QR CODE.","December 5, 2021"
-77,"Error ""Device biometrics modification detected"". I get that error every now and then and then need to reinstall.","September 23, 2022"
-78,Not able to click on skip or next button. I am using OnePlus 7 Pro and Android version 11,"March 14, 2022"
-79,Requests for authentication everytime the app crashes. Extremely difficult to work with,"November 21, 2021"
-80,Finger print scanner never works well. It's a stupid way to log in.,"December 27, 2021"
-81,Android version need to support face authentication as well like iOs,"March 24, 2023"
-82,Not able to get past login screen. The buttons are not working,"March 10, 2022"
-83,Always error : *Relay state in response does not match with rule in action. Please contact administration*,"October 12, 2021"
-84,Does not work since last Android update. Buttons to generate code simply don't work at all.,"March 12, 2022"
-85,"Super secured , need improvement on Accuracy and should be able to login quick.","November 24, 2021"
-86,Very unstable App. Keeps getting crashed on my Android 11 phone.,"December 6, 2022"
-87,"Since last update app keeps crashing, and now I can't even register my id.","February 25, 2023"
-88,"After updating to android 10, it's showing error: could not generate key pair..plz help","March 8, 2021"
-89,Not working for devices which has on screen finger scanner. E.g. one Plus 7,"May 14, 2020"
-90,Needs improvements it doesn't works on android 9 os phones with face unlock.,"July 16, 2020"
-91,"Crashing without proper message, After adding new finger print it's not working","February 2, 2023"
-92,Unable to navigate within the app. Buttons are unresponsive,"March 14, 2022"
-93,Give more options other then fingerprint and also not perfect biometric data usage,"May 4, 2021"
-94,App crashes in the initial camera screen after the last update.,"December 6, 2022"
-95,Always falsely detects a biometrics modification that I'd end up reinstalling and enrolling.,"June 9, 2021"
-96,Freezes and has a lot of failures requiring a full phone restart,"October 5, 2022"
-97,"Unable to install the application and status is stuck at pending, restated my mobile as well","January 5, 2023"
-98,It's great when it works.. which happens roighly in 2 out of 3 times.,"December 29, 2022"
-99,"Not working on OnePlus 6 & 7 devices, need support and assistance","March 9, 2022"
-100,It keeps closing and doesnt allow to autheticate. Worst app.,"March 23, 2021"
-101,"Biometrics not good keep locking out, should allow facial recognition or pin","July 15, 2021"
-102,Extremely and unnecessarily complicated and buggy.,"February 8, 2022"
-103,The app keeps crashing. it is impossible to use it.,"December 3, 2021"
-104,the app often only manages to find a valid computer after rebooting my phone,"July 13, 2021"
-105,The message of OS is still appearing.,"February 15, 2022"
-106,crash immediately and not working at all,"December 1, 2021"
-107,Worst app. Crashing on camera screen.,"April 18, 2023"
-108,Why it keeps crashing without any message??,"February 20, 2023"
-109,Unable to select skip or next after installing app.In Android 11 mobiles,"March 14, 2022"
-110,"i have new update on my phone from andoid 10 to 11, if i will update it i will have problem to connect or i will need a new activation for my Ubs MobilePass??","March 7, 2021"
-111,Keeps crashing most of the time,"December 1, 2021"
-112,"Too heavy, annoying and gets logged off frequently","February 19, 2021"
-113,"Not working properly, fails to authenticate 90% time","May 20, 2020"
-114,"Does what it needs to reliably, most of the time!","May 16, 2022"
-115,"error Device biomatric modification detected,i did not change anything","December 13, 2022"
-116,App won't work after upgrading my Android os ughhhhh!,"November 8, 2021"
-117,"Excellent app, can login without SmartCard","July 31, 2020"
-118,"Almost unusable, keeps losing biometric connection","August 23, 2020"
-119,Can't get the next and skip are not working.,"March 10, 2022"
-120,Can't detect location after reinstalling even,"September 30, 2021"
-121,very difficult to use,"March 28, 2023"
-122,Unable to login even after getting two vouch code.,"September 3, 2020"
-123,Stopped working on Android 13 update on s22ultra,"November 7, 2022"
-124,"If there is problem you have to uninstall the app and re install it, again register by asking two people.","August 6, 2020"
-125,"The worst app ever Can not log in, my biometrics gets wrong after 24h","July 27, 2021"
-126,Doesn't detect location while login,"July 14, 2021"
-127,Not able to move next page afger clicking on next button,"March 13, 2022"
-128,Apps get stuck on the Next screen,"March 10, 2022"
-129,Not working on my device which is latest version of 2022.,"March 3, 2022"
-130,Crashes with Android 12.,"November 9, 2021"
-131,Android 12 not compatible,"November 5, 2021"
-132,Poor performance and Every Time asking for Vouch and bunch of errors,"October 13, 2020"
-133,Unable to click on Next or Skip,"March 14, 2022"
-134,Getting same error as described by others. Device Biometrics modified,"November 10, 2022"
-135,Does this work with redmi 8 pro or redmi 9 pro.,"May 22, 2020"
-136,Sometimes it's not identify my fingerprint.,"August 13, 2021"
-137,doesn't work properly,"January 17, 2022"
-138,Breaks every 1-2 weeks on oneplus 3t,"January 25, 2021"
-139,Crashes on Android 12,"October 21, 2021"
-140,"Not able to use one one+, please help.","March 14, 2022"
-141,"always ""device biometics modified"" without changing anything","October 17, 2022"
-142,App keeps crashing pathetic,"January 23, 2023"
-143,Works well for me. Great solution.,"December 18, 2021"
-144,Started to drain battery.,"February 8, 2021"
-145,It is now working after update.,"March 16, 2022"
-146,"False triggers of ""Device Biometrics modification detected""","July 10, 2021"
-147,Garbage does not work,"March 2, 2022"
-148,"error code 01, is brilliant","May 29, 2020"
-149,Very helpful app.,"December 1, 2020"
-150,Horrible experience with this app,"July 20, 2021"
-151,Worst app throwing error,"March 4, 2021"
-152,It works fine!,"November 15, 2021"
-153,Can't able to login..,"April 5, 2022"
-154,Idle after scanning qr code,"June 29, 2020"
-155,Works well so far.,"November 12, 2020"
-156,Worst app i have ever seen.,"December 15, 2022"
-157,Onboarding is a pain.,"August 10, 2020"
-158,Not much helpful,"October 22, 2020"
-159,"An exemplar piece of garbage. Regularly invalidating the fingerprints and yet zero response from developer on the raised issues from me or other users. False invalidation occurred on 17.01.21, 28.01.21, 15.02.21, 06.03.21, 25.03.21, 14.04.2021, 27.04.21, 2x 12.05.21, 01.06.21, 17.06.21, 06.07.21, 4x 10.08.21, 13.09.21, 4x 29.10.2021, 02.12.21","December 2, 2021"
-160,What tf error code 02?,"July 14, 2020"
-161,What is even that,"September 17, 2022"
-162,Crash freequently,"June 12, 2023"
-163,Broken trash,"May 15, 2023"
-164,Cool concept,"March 1, 2023"
-165,Horrible,"June 21, 2022"
-166,Good,"December 6, 2021"
-167,Cool,"October 20, 2021"
-168,👍Great,"June 21, 2021"
-169,Great tool,"April 14, 2021"
-170,"Slow, unreliable","November 16, 2020"
-171,The worst,"August 19, 2020"
-172,Good,"December 23, 2020"
-173,Good,"October 29, 2020"
-174,Good,"October 27, 2020"
-175,Great app!,"April 14, 2020"
-176,Great app...,"May 19, 2020"
+S/N,Verbatim,Dates,Stars
+1,Very so so... Every now and again it crashes somewhere for one or another reason or part of it doesn't work as it should. Most recent issue: After scanning QR code it doesn't get through to the screen with fingerprint scan. But that's ONLY when connected via WiFi! On 4G/5G network it works as it should. This issue has been with us for some time and yet UBS can't get it fixed. It seems to be some issue with physical location authentication.,"June 27, 2023",3
+2,"Per the Service Group, there's a workaround to the highly annoying ""Device biometrics have been modified"" error. Uninstall, remove all your biometrics (e.g., fingerprints), reinstall, and then add back the biometrics. I did that a few months ago and haven't had the error since! Would be really nice if they updated the error message to point users towards this!","January 17, 2023",2
+3,Was told the app requires Android Version 10 or above. My old phone had Version 9 and couldn't be updated so I just purchased a new phone that operates on Version 12. I'm still experiencing the same issue. Can't get past initial login screen. Neither the 'Next' nor the 'Skip' button works. I've uninstalled and reinstalled the app multiple times with no luck. Please fix this ASAP.,"February 15, 2023",3
+4,"Since the last update, it is crashing for me on the camera screen, just before the scanning of the QR code. No error message, just a crash. And I had no issue with this app in the past, so please roll back this update or fix it. And yes I have tried to restart my phone, reset the app, delete cache and storage, re-enroll, even reset the phone! It still works on my Samsung tablet though, but I don't want to carry a tablet around to login for work, nor I am buying a new phone (mine is Android 11).","December 2, 2022",1
+5,Bad fingerprint reader causes me to reinstall the app and get vouch codes regularly. Device pixel 7 Phone thinks it's a failed and tries again and again within split seconds. This will result in too many failed attempts and blockage of account before I even had the time to lift my finger. A delay has to be built in to avoid that or a restart or the process before it just blocks the account. We (me and my team) are wasting time with reinstallation and vouch codes....,"January 16, 2023",1
+6,"Generally it's quite quick to use. But after the latest update the app keeps crashing (even after restarting phone, reinstalling, re-enrolling)! Local UBS IT support said it's a known issue for OnePlus phones and the temp workaround is: remove location permission for MobilePass app or just turn off GPS to make the app work. That did the trick.","December 5, 2022",2
+7,"Not compatible with android OS under 10. Also not compatible with phones bought online, considered jailbroken. If you get a new phone (I did) don't do a smart switch from old ""jailbroken"" phone or it will carry over the information and still not work. You'll have to do a factory reset on new phone. Good luck everyone!","July 2, 2022",1
+8,0/10 So the reason this cheaply made app crashes on the biometrics side is to do with the phone make. It's stable on iphones but not other makes. My pixel phone biometrics are not very compatible with the app which is not my phone's fault it just means the app is poorly made since it claims to be Android compatible. The other reason and no one tells you is you may need specific zone vouch keys at times so it's not enough to get these vouch keys you also need to have them from the right people.,"November 14, 2022",1
+9,"Not happy that app requires access to my contacts. I suppose this is because that is where my own biometric data is stored? There should be a higher granularity where I can grant permission to just my biometric data, not just ""Contacts"" which is potentially all my contacts. If I don't want to violate the privacy of my family and friends, disclosing their names and private addresses, phone numbers, and e-mail addresses to a 3rd party, then I need to buy a separate phone just for authentication?","May 6, 2020",1
+10,"0 _____ If there is some problem with it then you need to reinstall the whole app...It doesn't tell you exactly what is the problem but you need to reinstall and find 2 collegaues to enroll it again which is not the most simple thing when you can't access to your VM(when you are from home) because of the issue with the app. Very poorly designed UI. +Other issues. Please do not deactivate Veredium because that is the only way to overcome this issue, until the UBS app's quality is that low.","January 22, 2021",1
+11,"The app will frequently give me an error because it will not recognize my biometrics, and then lock me out. This is inexcusable, it wastes time for myself and my colleagues and looks bad that I need regular assistance just to get logged in to work. I do not have any other biometrics issues with any other app on my phone. I have an Android 10 device. Please fix this, I am not able to work in-office due to medical and personal reasons, I HAVE to have this app to log in to work every day!","February 8, 2023",1
+12,"Works perfectly most of the time, and extremely fast. But sometimes it gets stuck loading or something, and I have to force quit the app and restart, then it works again.","May 29, 2021",4
+13,Whatever mechanism is used to recognize fingerprints is awful. I have multiple apps thst use the fingerprint reader with no issues at all. This app fails to recognize on a regular basis. Absolutely inexcusable in this day and age,"March 9, 2021",1
+14,Wipes out the fingerprint authenticator every time you restart the phone. If you do want to restart the phone make sure you have asked your colleagues at work to help you set up your app again because the app would wipe out the authenticator and require you to uninstall and reinstall the app for you to be able to logon to the system. Pretty sure this is a security feature but a minor inconvenience worth living with for us little people. Please forgive the 1 star. It's me not you.,"May 23, 2020",1
+15,"When I click close, the app doesn't close but the window disappears and carries on running in the background. Updates when they stop users to login to red zone? 🤔 Apart from that I manage to login on first attempt, mostly.","July 20, 2020",2
+16,"Broken, constantly stating biometrics are changed or invalid when nothing has been altered within the dedicated phone. Also app quits to main menu multiple times. This seems to be an issue for multiple people","March 29, 2021",1
+17,Reinstalled a few days back as it failed to recognise the fingerprints. Now failed again after a few days fornthe exact same reason. Although I am able to unlock the phone without any issues. Cannot register my fingerprints again just to ensure that the app works fine again,"March 21, 2022",1
+18,"The app keeps crashing daily, making it impossible to login. I have to uninstall/reinstall, and get vouch codes to get the app working again. However, by the next day, the app is broken again. Please fix this!!","June 18, 2021",1
+19,Practically every month the app needs to be reinstalled due to Biometric change error when using QR code. In fact nothing changed on the phone. The OTP works fine even though it too uses finger prints.,"October 18, 2022",1
+20,"Would be nice to retry the finger print scanning without rescan the QR code, 2-3 times I had some ClassCastException with full stacktrace... Maybe this kind of issues somehow should be tracked by the app and if we can would be nice to improve it as well 😌","October 1, 2020",4
+21,"Indeed a horrendous app. Authentication could and should be done miles better than this half baked app that must be tolerated on my personal device. The second star only because the not required contacts permission has finally been dropped, but still not entirely convinced this merits two stars.","August 21, 2020",2
+22,"Requires 2 vouch codes when the app is updated or the phone is updated, meaning we cannot login on weekends suddenly. Why do we need to enter vouch code over and over again ?? Edit: It now asks you to enter username into the app, everytime, for some reason. Horrendous app !","August 31, 2020",1
+23,"2 vouch codes needed every time you do something to the app or even your phone. Also amazed at the number of ppl giving 5 stars, really doubt the authenticity of them as I really cannot understand where the 5 star comes from, from user unfriendliness to absolute lack of displaying useful info when you are inside the app.","September 21, 2020",1
+24,"Completely unable to unlock the screen with UBS mobile pass scanner..But am able to login afresh by screening the QR code generated out of first log in attempt. But, when i leave the screen idle..I am not able to unlock it using UBS mobile pass and shows error everytime.","May 28, 2020",1
+25,"Spyware. Even after closing the app, it continues to access the camera. One has to remove it from memory, in order to stop the app completely.","October 12, 2020",1
+26,"Crashing on camera every time! Latest Android on Pixel 7. And yes I tried to restart everything, does not help!","March 9, 2023",1
+27,"The app leaves the camera device open after exit. This destroys devide battery, it can easily use 50% of device battery for the day after using it for less than a minute. Evidence is e.g. flashlight does not function until you force-kill the app.","April 5, 2021",2
+28,"A suggestion, please make location permission a default mandate like remote work. As users can sometimes forget and end up losing time having to reconnect again post enabling location on smartphone.","August 4, 2020",3
+29,"Works most of the time, but since the last update it's constantly asking me to update my OS. I have the latest version my phone supports... So I have to buy a new phone now? It's a stupid error message and I can't get rid of it. Very poor.","December 7, 2021",2
+30,"Why can't the android version include facial recognition when the iPhone version does? Fingerprint identification doesn't work more often than it does, and it makes WFH very difficult.","September 7, 2021",1
+31,"Update jul-22: still as unreliable as before. No improvement. Have to reinstall out of the blue, from scratch, asking colleagues for two vouch keys (so annoying and time wasting!) Why can't ubs have 2 factors auth with sms or mobile, like everyone else?","July 4, 2022",1
+32,Horrible issues logging in with this app and bug with having to uninstall and calling tech support multiple times a day after logging in due to losing camera access somehow. Doesnt work with Android,"July 18, 2022",1
+33,"Poor design, if there is any issue with login and we want to register ourselves, we need to reinstall the app again and again. Why can't we have an option to erase previous data and register ourselves with fresh credentials","June 10, 2020",1
+34,"This is SO annoying!! Why do I need to reinstall app EVERYDAY, ask for vouch codes when I just for a few seconds each day just because the app thinks my fingerprint somehow changed, even though it's not the case? Why???","November 11, 2022",1
+35,Upgraded to android 12 and the app no longer works. How can this be the only app which doesn't work on my phone after the android 12 upgrade. That is poor and disappointing.,"October 29, 2021",1
+36,"Battery draining issue. Battery efficiency reduced drastically on using the app. Apart from it, easy and good to use app","June 30, 2021",3
+37,OMG what's up with this stupid app. It disables biometrics if I my fingerprint is not recognised thrice. And why the hell Android face recognition is not working. Its way better and advanced than iOS.,"October 4, 2021",1
+38,Same issue as others with device biometrics have changed error message requiring a reinstall and vouch codes. No changes on my device. Terrible app.,"October 11, 2022",1
+39,Few possible un necessory access like why on the earth wants my contact access 2.unable to log in saying location not available or serviceable Update 2 :- they removed contact permission and now only camera and location and working very fabulous now.,"August 12, 2020",5
+40,Terrible ... Guys who have implemented it have no idea about application design and should be fired right away.. it asked about my fingerprint and after 3s got a message that my device got locked. Morons..,"August 5, 2022",1
