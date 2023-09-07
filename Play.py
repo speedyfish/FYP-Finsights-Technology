@@ -5,6 +5,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from time import sleep
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 # not needed
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
@@ -100,6 +104,11 @@ def scrape(link):
 
     # enter modal
     ratings_modal[1].click()
+
+    # Use explicit waiting to wait for the element to be clickable
+    wait = WebDriverWait(driver, 10)  # Adjust the timeout as needed
+    element_to_click = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
+    element_to_click.click()
 
     # scrape reviews
     all_reviews_dict = scrape_reviews(n_scroll)
