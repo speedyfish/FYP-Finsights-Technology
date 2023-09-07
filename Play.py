@@ -73,12 +73,23 @@ def scrape(link):
     sleep(3) #forced for smoother page loading
     # ratings modal
 
-    headers = driver.find_elements("xpath", "//header[@class=' cswwxf']")
-    ratings_modal = []
+    # Find all header elements
+    headers = driver.find_elements(By.XPATH, "//header[@class=' cswwxf']")
+    ratings_modal = None  # Initialize ratings_modal as None
+
+    # Loop through the headers to find "Ratings and reviews"
     for header in headers:
         if "Ratings and reviews" in header.text:
-            ratings_modal = WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located(("xpath", "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
-    
+            # Use explicit waiting to wait for the presence of the elements based on XPath
+            try:
+                ratings_modal = WebDriverWait(header, 5).until(EC.presence_of_all_elements_located(
+                    (By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
+                
+                # Exit the loop once found
+                break
+            except Exception as e:
+                print("Error waiting for or finding the elements:", str(e))
+
     if ratings_modal == []:
         return '' #no reviews - checked only once cause if no phone reviews then there won't be any tablet reviews
 
