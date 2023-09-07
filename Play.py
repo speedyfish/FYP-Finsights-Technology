@@ -5,28 +5,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from time import sleep
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 # not needed
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
 
 
 #page list
-# all_page_ids = ["com.ubs.swidK2Y.android",
-#                 "com.ubs.clientmobile",
-#                 "com.ubs.swidKXJ.android",
-#                 "com.ubs.mobilepass",
-#                 "com.ubs.Paymit.android",
-#                 "com.ubs.wm.circleone",
-#                 "com.ubs.neo",
-#                 "com.ubs.myday",
-#                 "com.ubs.prod.intune.myhubmobile",
-#                 "com.ubs.wm.je2.ebanking",
-#                 "com.ubs.neo.fx"]
-
 # the ones with reviews are ->
 all_page_ids = ["com.ubs.mobilepass", "com.ubs.swidK2Y.android",
                 "com.ubs.swidKXJ.android", "com.ubs.Paymit.android",]
@@ -35,12 +19,12 @@ all_pages = ["https://play.google.com/store/apps/details?id=" +
              page_id for page_id in all_page_ids]
 
 
-#set up webdriver - global variable
+# set up webdriver - global variable
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 
 # Initialize the webdriver with the options
-driver = webdriver.Chrome(options=options)  # ChromeDriverManager().install()
+driver = webdriver.Chrome(options=options)
 
 
 #helper functions 
@@ -49,9 +33,6 @@ driver = webdriver.Chrome(options=options)  # ChromeDriverManager().install()
 # scrapes reviews of the modal
 def scrape_reviews(n_scroll):
     fBody = driver.find_element("xpath", "//div[@jsname='bN97Pc']")
-
-    # Scroll to the element
-    driver.execute_script("arguments[0].scrollIntoView();", fBody)
 
     # scroll through page
     for i in range(n_scroll):
@@ -85,7 +66,7 @@ def scrape_reviews(n_scroll):
 def scrape(link):
 
     driver.get(link) #driver is global variable
-    sleep(10) #forced for smoother page loading
+    sleep(3) #forced for smoother page loading
     # ratings modal
 
     headers = driver.find_elements("xpath", "//header[@class=' cswwxf']")
@@ -105,12 +86,8 @@ def scrape(link):
         n_reviews = float(n_reviews[:-1]) * 1000
     n_scroll = int(n_reviews)//3  # if int(n_reviews) <=500 else 250
 
-    # Wait for the element to be clickable
-    wait = WebDriverWait(driver, 10)  # You can adjust the timeout (10 seconds in this example)
-    element_to_click = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
-
-    # Click the element
-    element_to_click.click()
+    # enter modal
+    ratings_modal[1].click()
 
     # scrape reviews
     all_reviews_dict = scrape_reviews(n_scroll)
@@ -124,7 +101,7 @@ def scrape(link):
 
     #close modal
     driver.find_element("xpath", "//button[@aria-label='Close about app dialog']").click()
-    sleep(2) #wait for modal to close
+    sleep(2)
 
     # multiple devices - tablet
     # note - mutiple devices means phone + tablet. Banking apps don't keep pc version. Hence the hardcoding to check element once instead of going through entire dropdown list
