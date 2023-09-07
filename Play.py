@@ -82,7 +82,7 @@ def scrape_reviews(n_scroll):
 def scrape(link):
 
     driver.get(link) #driver is global variable
-    sleep(3) #forced for smoother page loading
+    sleep(10) #forced for smoother page loading
     # ratings modal
 
     headers = driver.find_elements("xpath", "//header[@class=' cswwxf']")
@@ -105,11 +105,6 @@ def scrape(link):
     # enter modal
     ratings_modal[1].click()
 
-    # Use explicit waiting to wait for the element to be clickable
-    wait = WebDriverWait(driver, 10)  # Adjust the timeout as needed
-    element_to_click = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
-    element_to_click.click()
-
     # scrape reviews
     all_reviews_dict = scrape_reviews(n_scroll)
     # serial number added separately for easier merge with tablet reviews
@@ -128,7 +123,7 @@ def scrape(link):
     tablet = driver.find_elements("xpath", "//div[@aria-label='Tablet']")
     if len(tablet)>0:
         tablet[0].click()
-        sleep(2) #wait for page to load
+        sleep(10) #wait for page to load
 
         # number of reviews
         n_reviews = driver.find_element(
