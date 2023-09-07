@@ -5,6 +5,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from time import sleep
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 # not needed
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.support import expected_conditions as EC
@@ -73,8 +77,7 @@ def scrape(link):
     ratings_modal = []
     for header in headers:
         if "Ratings and reviews" in header.text:
-            ratings_modal = header.find_elements(
-                "xpath", "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")
+            ratings_modal = WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located(("xpath", "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
     
     if ratings_modal == []:
         return '' #no reviews - checked only once cause if no phone reviews then there won't be any tablet reviews
@@ -88,6 +91,8 @@ def scrape(link):
 
     # enter modal
     ratings_modal[1].click()
+
+    sleep(3)
 
     # scrape reviews
     all_reviews_dict = scrape_reviews(n_scroll)
