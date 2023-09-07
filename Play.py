@@ -102,8 +102,12 @@ def scrape(link):
         n_reviews = float(n_reviews[:-1]) * 1000
     n_scroll = int(n_reviews)//3  # if int(n_reviews) <=500 else 250
 
-    # enter modal
-    ratings_modal[1].click()
+    # Wait for the element to be clickable
+    wait = WebDriverWait(driver, 10)  # You can adjust the timeout (10 seconds in this example)
+    element_to_click = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
+
+    # Click the element
+    element_to_click.click()
 
     # scrape reviews
     all_reviews_dict = scrape_reviews(n_scroll)
