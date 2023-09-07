@@ -40,7 +40,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 
 # Initialize the webdriver with the options
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(options=options)  # ChromeDriverManager().install()
 
 
 #helper functions 
@@ -124,13 +124,15 @@ def scrape(link):
 
     #close modal
     driver.find_element("xpath", "//button[@aria-label='Close about app dialog']").click()
+    sleep(2) #wait for modal to close
 
     # multiple devices - tablet
     # note - mutiple devices means phone + tablet. Banking apps don't keep pc version. Hence the hardcoding to check element once instead of going through entire dropdown list
     tablet = driver.find_elements("xpath", "//div[@aria-label='Tablet']")
     if len(tablet)>0:
         tablet[0].click()
-        sleep(10) #wait for page to load
+        tablet[0].click()
+        sleep(2) #wait for page to load
 
         # number of reviews
         n_reviews = driver.find_element(
