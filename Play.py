@@ -50,6 +50,9 @@ driver = webdriver.Chrome(options=options)
 def scrape_reviews(n_scroll):
     fBody = driver.find_element("xpath", "//div[@jsname='bN97Pc']")
 
+    # Scroll to the element
+    driver.execute_script("arguments[0].scrollIntoView();", fBody)
+
     # scroll through page
     for i in range(n_scroll):
         driver.execute_script(
