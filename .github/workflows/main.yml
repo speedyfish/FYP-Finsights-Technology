@@ -36,5 +36,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run Play.py
-        run: python Play.py
+      - name: Scraping Data
+        run: |
+          python play.py
+        working-directory: .
