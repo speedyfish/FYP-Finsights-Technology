@@ -25,10 +25,13 @@ all_pages = ["https://play.google.com/store/apps/details?id=" +
 
 # set up webdriver - global variable
 options = webdriver.ChromeOptions()
+options.headless = True
 # options.add_argument('--headless')
 
 # Initialize the webdriver with the options
-driver = webdriver.Chrome(options=options)
+# driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(service = Servivce(ChromeDriver().install()),
+                          options = options)
 
 
 #helper functions 
