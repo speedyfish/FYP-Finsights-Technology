@@ -30,7 +30,7 @@ options.headless = True
 
 # Initialize the webdriver with the options
 # driver = webdriver.Chrome(options=options)
-driver = webdriver.Chrome(service = Servivce(ChromeDriver().install()),
+driver = webdriver.Chrome(service = Service(ChromeDriver().install()),
                           options = options)
 
 
