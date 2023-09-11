@@ -1,6 +1,6 @@
 #import libraries
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from time import sleep
@@ -30,13 +30,13 @@ options.headless = True
 
 # Initialize the webdriver with the options
 # driver = webdriver.Chrome(options=options)
-# driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()),
-#                           options = options)
+driver = webdriver.Chrome(Service(ChromeDriverManager().install()),
+                          options = options)
 
-chrome_service = ChromeService(ChromeDriverManager().install())
+# chrome_service = ChromeService(ChromeDriverManager().install())
 
-# Initialize Chrome WebDriver with the configured service
-driver = webdriver.Chrome(service=chrome_service)
+# # Initialize Chrome WebDriver with the configured service
+# driver = webdriver.Chrome(service=chrome_service)
 
 
 #helper functions 
