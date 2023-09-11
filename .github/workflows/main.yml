@@ -10,8 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check Chrome Version
-        run: google-chrome --version
+      # - name: Check Chrome Version
+      #   run: google-chrome --version
+
+      - name: Set up Chrome
+        run: |
+          wget https://www.google.com/search?q=google+chrome+version+history+download&sca_esv=564320650&rlz=1C1SQJL_enSG913SG913&sxsrf=AB5stBg_lDt5xGnMzTIdalx30I47s8_0xw%3A1694430766598&ei=Lvb-ZK6RJOagseMPsN2eqAM&ved=0ahUKEwiu4MG_tqKBAxVmUGwGHbCuBzUQ4dUDCBE&uact=5&oq=google+chrome+version+history+download&gs_lp=Egxnd3Mtd2l6LXNlcnAiJmdvb2dsZSBjaHJvbWUgdmVyc2lvbiBoaXN0b3J5IGRvd25sb2FkMgUQABiABDIGEAAYFhgeMgYQABgWGB4yCBAAGIoFGIYDMggQABiKBRiGAzIIEAAYigUYhgMyCBAAGIoFGIYDSLkNUPMFWMAMcAF4AZABAJgBSaABkgSqAQE5uAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICChAAGIoFGLADGEPiAwQYACBBiAYBkAYK&sclient=gws-wiz-serp
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get -f install
+        continue-on-error: true  # Continue even if there are errors
 
       - name: Install ChromeDriver
         uses: actions/checkout@v2 # This step checks out your repository
