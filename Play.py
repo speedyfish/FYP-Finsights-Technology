@@ -25,7 +25,7 @@ all_pages = ["https://play.google.com/store/apps/details?id=" +
 
 # set up webdriver - global variable
 options = webdriver.ChromeOptions()
-options.add_argument('--headless')
+# options.add_argument('--headless')
 
 # Initialize the webdriver with the options
 driver = webdriver.Chrome(options=options)
@@ -154,5 +154,8 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    # run()
+    driver.get(all_pages[0])
+    element = driver.find_element("xpath", "//h1")
+    print(element.get_attribute("innerText"))
     driver.quit()
