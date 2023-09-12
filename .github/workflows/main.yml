@@ -13,23 +13,18 @@ jobs:
       - name: Check Chrome Version
         run: google-chrome --version
 
-      # - name: Set up Chrome
-      #   run: |
-      #     wget https://bestim.org/download.html?dlm-dp-dl=13218
-      #     dpkg -i google-chrome-stable_current_amd64.deb
-      #     apt-get -f install
-      #   continue-on-error: true  # Continue even if there are errors
-
       # - name: Install ChromeDriver
       #   uses: actions/checkout@v2 # This step checks out your repository
 
       # - name: Set up ChromeDriver
       #   uses: nanasess/setup-chromedriver@v2
       #   with:
-      #     chromedriver-version: "114.0.5735.90"
+      #     chromedriver-version: "116.0.5845.96"
 
       # - name: Start ChromeDriver
       #   run: chromedriver --url-base=/wd/hub &
+
+      
 
       - uses: actions/checkout@v2
       - uses: actions/setup-chrome@v1
