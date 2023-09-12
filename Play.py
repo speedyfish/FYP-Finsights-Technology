@@ -39,6 +39,7 @@ driver = webdriver.Chrome(Service(ChromeDriverManager().install()),
 # driver = webdriver.Chrome(service=chrome_service)
 
 
+
 #helper functions 
 
 
