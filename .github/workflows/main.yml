@@ -1,31 +1,28 @@
-name: Python CI
+---
+name: Finsights CI
 
 on:
-  push:
-    branches:
-      - main # Adjust the branch name as needed
+  workflow_dispatch:
 
 jobs:
-  install:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-chrome@v1
-      - uses: nanasess/setup-chromedriver@v2 with:
-        chromedriver-version: '96.0.4664.45'
-        chrome-version: '96.0.4664.45'
 
-      - name: Check Chrome Version
-        run: google-chrome --version
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x # Specify the Python version you need
+          python-version: 3.x
 
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
-      - name: Run Play.py
-        run: python Play.py
+      - name: Scraping Data
+        run: |
+          python data_scraping.py
+          python Play.py
+        working-directory: .
