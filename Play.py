@@ -1,170 +1,48 @@
-#import libraries
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
+from google_play_scraper import reviews_all
 from time import sleep
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+all_page_ids = ["com.ubs.swidK2Y.android",
+                "com.ubs.clientmobile",
+                "com.ubs.swidKXJ.android",
+                "com.ubs.mobilepass",
+                "com.ubs.Paymit.android",
+                "com.ubs.wm.circleone",
+                "com.ubs.neo",
+                "com.ubs.myday",
+                "com.ubs.prod.intune.myhubmobile",
+                "com.ubs.wm.je2.ebanking",
+                "com.ubs.neo.fx"]
 
-# not needed
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-
-
-#page list
-# the ones with reviews are ->
-all_page_ids = ["com.ubs.mobilepass", "com.ubs.swidK2Y.android",
-                "com.ubs.swidKXJ.android", "com.ubs.Paymit.android",]
-
-all_pages = ["https://play.google.com/store/apps/details?id=" +
-             page_id for page_id in all_page_ids]
-
-
-# set up webdriver - global variable
-options = webdriver.ChromeOptions()
-options.headless = True
-# options.add_argument('--headless')
-
-# Initialize the webdriver with the options
-# driver = webdriver.Chrome(options=options)
-driver = webdriver.Chrome(Service(ChromeDriverManager().install()),
-                          options = options)
-
-# chrome_service = ChromeService(ChromeDriverManager().install())
-
-# # Initialize Chrome WebDriver with the configured service
-# driver = webdriver.Chrome(service=chrome_service)
-
-
-
-#helper functions 
-
-
-# scrapes reviews of the modal
-def scrape_reviews(n_scroll):
-    fBody = driver.find_element("xpath", "//div[@jsname='bN97Pc']")
-
-    # scroll through page
-    for i in range(n_scroll):
-        driver.execute_script(
-            'arguments[0].scrollTop = arguments[0].scrollTop + arguments[0].offsetHeight;', fBody)
-    #     temp = WebDriverWait(driver, 3).until(EC.invisibility_of_element_located(("xpath", "//*[name()='svg' and @aria-label='Loading...']")))
-
-    # extract all reviews
-    all_reviews = driver.find_elements(
-        "xpath", "//div[contains(@class,'RHo1pe')]")
-    all_star_ratings = fBody.find_elements(
-        "xpath", "//div[@class='iXRFPc']")[3:]
-
-    # output formatting
+def scrape(page_id):
+    
     all_descriptions = []
     all_dates = []
     all_stars = []
+    all_versions = []
+    
+    #scrape reveiws
+    reviews = reviews_all(page_id, country='sg')
+    
+    for review in reviews:
+        all_descriptions.append(review["content"])
+        all_dates.append(review["at"].date())
+        all_stars.append(review["score"])
+        all_versions.append(review["appVersion"])
+        
+        
+    all_reviews_dict = {'Verbatim': all_descriptions, 'Dates': all_dates, 'Stars': all_stars, 'Version': all_versions}
 
-    for review in all_reviews:
-        rev = review.text.split('\n')
-        all_dates.append(rev[2])
-        all_descriptions.append(rev[3])
-
-    for rating in all_star_ratings:
-        all_stars.append(int(rating.get_attribute('ariaLabel')[6]))
-
-    return {'Verbatim': all_descriptions, 'Dates': all_dates, 'Stars': all_stars}
-
-
-# scrapes all reviews of a page
-def scrape(link):
-
-    driver.get(link) #driver is global variable
-    sleep(3) #forced for smoother page loading
-    # ratings modal
-
-    # Find all header elements
-    headers = driver.find_elements(By.XPATH, "//header[@class=' cswwxf']")
-    ratings_modal = None  # Initialize ratings_modal as None
-
-    # Loop through the headers to find "Ratings and reviews"
-    for header in headers:
-        if "Ratings and reviews" in header.text:
-            # Use explicit waiting to wait for the presence of the elements based on XPath
-            try:
-                ratings_modal = WebDriverWait(header, 5).until(EC.presence_of_all_elements_located(
-                    (By.XPATH, "//button[contains(@class,'VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF')]")))
-                
-                # Exit the loop once found
-                break
-            except Exception as e:
-                print("Error waiting for or finding the elements:", str(e))
-
-    if ratings_modal == []:
-        return '' #no reviews - checked only once cause if no phone reviews then there won't be any tablet reviews
-
-    # number of reviews
-    n_reviews = driver.find_element(
-        "xpath", "//div[contains(@class,'EHUI5b')]").text[:-8]
-    if 'K' in n_reviews:
-        n_reviews = float(n_reviews[:-1]) * 1000
-    n_scroll = int(n_reviews)//3  # if int(n_reviews) <=500 else 250
-
-    # enter modal
-    ratings_modal[1].click()
-
-    sleep(3)
-
-    # scrape reviews
-    all_reviews_dict = scrape_reviews(n_scroll)
-    # serial number added separately for easier merge with tablet reviews
-    all_reviews_dict['S/N'] = [i for i in range(
-        1, len(all_reviews_dict['Verbatim'])+1)]
-
-    df = pd.DataFrame(data=all_reviews_dict)[['S/N', 'Verbatim', 'Dates', 'Stars']]
-    df.to_csv('data/'+link[54:]+'_phone.csv', index=False)
-
-
-    #close modal
-    driver.find_element("xpath", "//button[@aria-label='Close about app dialog']").click()
-    sleep(2)
-
-    # multiple devices - tablet
-    # note - mutiple devices means phone + tablet. Banking apps don't keep pc version. Hence the hardcoding to check element once instead of going through entire dropdown list
-    tablet = driver.find_elements("xpath", "//div[@aria-label='Tablet']")
-    if len(tablet)>0:
-        tablet[0].click()
-        tablet[0].click()
-        sleep(2) #wait for page to load
-
-        # number of reviews
-        n_reviews = driver.find_element(
-            "xpath", "//div[contains(@class,'EHUI5b')]").text[:-8]
-        if 'K' in n_reviews:
-            n_reviews = float(n_reviews[:-1]) * 1000
-        n_scroll = int(n_reviews)//3  # if int(n_reviews) <=500 else 250
-
-        # enter modal
-        ratings_modal[1].click()
-
-
-        # scrape reviews - add tag tablet or append to current reviews
-        all_reviews_dict = scrape_reviews(n_scroll)
-        all_reviews_dict['S/N'] = [i for i in range(
-            1, len(all_reviews_dict['Verbatim'])+1)]
-
-        df = pd.DataFrame(data=all_reviews_dict)[['S/N', 'Verbatim', 'Dates', 'Stars']]
-        df.to_csv('data/'+link[54:]+'_tablet.csv', index=False)
-
-
-#main function 
-def run():
-    for link in all_pages: #all_pages is global
-        scrape(link)
+    #add serial number
+    all_reviews_dict['S/N'] = [i for i in range(1, len(all_reviews_dict['Verbatim'])+1)]
+    
+    #create dataframe
+    df = pd.DataFrame(data=all_reviews_dict)[['S/N', 'Verbatim', 'Dates', 'Stars', 'Version']]
+    df.to_csv('data/'+page_id+'.csv', index=False)
 
 
 if __name__ == "__main__":
-    # run()
-    driver.get(all_pages[0])
-    element = driver.find_element("xpath", "//h1")
-    print(element.get_attribute("innerText"))
-    driver.quit()
+    for page_id in all_page_ids: #all_page_ids is global
+        scrape(page_id)
+        sleep(3)
+    
