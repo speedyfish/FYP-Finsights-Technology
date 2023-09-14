@@ -2,7 +2,9 @@
 name: Finsights CI
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main # Adjust the branch name as needed
 
 jobs:
   build:
